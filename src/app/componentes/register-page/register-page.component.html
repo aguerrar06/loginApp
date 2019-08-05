@@ -3,16 +3,16 @@
         <div class="card">
             <div class="card-body">
                 <h1 class="text-center">Registro</h1>
-                <form action="">
+                <form (submit)="onSubmitAddUser()">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" name="email" id="email" placeholder="Ingrese su E-Mail" class="form-control">
+                        <input type="email" name="email" id="email" placeholder="Ingrese su E-Mail" class="form-control" [(ngModel)]="email">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" class="form-control">
+                        <input type="password" name="password" id="password" placeholder="Ingrese su contraseña" class="form-control" [(ngModel)]="password">
                     </div>
-                    <input type="text" value="Enviar" class="btn btn-primary btn-block btn-lg">
+                    <input type="submit" value="Enviar" class="btn btn-primary btn-block btn-lg">
                 </form>
             </div>
         </div>
