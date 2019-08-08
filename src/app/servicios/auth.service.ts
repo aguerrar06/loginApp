@@ -20,6 +20,10 @@ export class AuthService {
     });
   }
 
+  loginGoogle() {
+    return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
+  }
+
   userLogin(email: string, pass: string) {
     return new Promise((resolve, reject) => {
       this.afAuth.auth.signInWithEmailAndPassword(email, pass).then(userData => resolve(userData), err => reject(err));
